@@ -1,5 +1,5 @@
 import React from 'react';
-import './status.scss';
+import './status.css';
 import TimerDisplay from './timer-display';
 
 

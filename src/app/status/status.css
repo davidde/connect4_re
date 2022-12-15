@@ -1,10 +1,7 @@
-// This will copy all the variables from '_variables.scss' into this file:
-@import "../variables";
-
 .status {
   grid-area: status;
-  background-color: $statusFillColor;
-  border-bottom: 2px solid $statusBorderColor;
+  background-color: var(--statusFillColor);
+  border-bottom: 2px solid var(--statusBorderColor);
   font-size: 1.5rem;
   font-weight: bold;
   height: 3.6rem;
@@ -56,8 +53,8 @@
 }
 
 #gameOverMessage {
-  // Use the empty #gameOverMessage as filler, to push #timerDisplay
-  // and #statusMessage to the left and right respectively:
+  /* Use the empty #gameOverMessage as filler, to push #timerDisplay
+  /* and #statusMessage to the left and right respectively: */
   flex-grow: 5;
   text-align: center;
   margin-top: 1rem;

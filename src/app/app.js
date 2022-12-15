@@ -3,7 +3,7 @@ import React from 'react';
 import vars from './app.css';
 import './app.css';
 
-// import Status from './status/status';
+import Status from './status/status';
 // import Settings from './settings/settings';
 // import Game from './game/game';
 
