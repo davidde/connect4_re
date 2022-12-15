@@ -1,6 +1,6 @@
 import React from 'react';
 import Checker from './checker';
-import './column.scss';
+import './column.css';
 
 
 class Column extends React.Component {

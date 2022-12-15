@@ -1,6 +1,6 @@
 import React from 'react';
 import Column from './column';
-import './game.scss';
+import './game.css';
 
 
 function Game(props) {

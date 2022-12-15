@@ -5,7 +5,7 @@ import './app.css';
 
 import Status from './status/status';
 import Settings from './settings/settings';
-// import Game from './game/game';
+import Game from './game/game';
 
 /**
  * The <App/> component functions as a container component for the

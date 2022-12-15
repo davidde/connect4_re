@@ -1,6 +1,6 @@
 import React from 'react';
 import TweenMax from 'gsap/TweenMax';
-import './checker.scss';
+import './checker.css';
 
 
 class Checker extends React.Component {
