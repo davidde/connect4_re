@@ -1,5 +1,5 @@
 import React from 'react';
-import './settings.scss';
+import './settings.css';
 
 
 function CheckerColor(props) {

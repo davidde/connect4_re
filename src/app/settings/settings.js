@@ -1,5 +1,5 @@
 import React from 'react';
-import './settings.scss';
+import './settings.css';
 
 import GridSize from './gridsize-setting';
 import CheckerColor from './checkercolor-setting';

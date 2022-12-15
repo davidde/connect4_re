@@ -1,0 +1,143 @@
+/* Styles of the settings sidebar itself: */
+.sidebar {
+  grid-area: settings;
+  height: 100%;
+  background-color: var(--sidebarFillColor);
+  border-right: 2px solid var(--sidebarFontColor);
+}
+
+@media (orientation: landscape), (min-width: var(--mediaQueryWidth)) {
+  .sidebar {
+    width: var(--sidebarLandscapeWidth);
+    transition: width var(--transitionDuration);
+  }
+  .sidebar.landscapePassive {
+    cursor: pointer;
+    width: 0.5rem;
+  }
+  .sidebar.landscapePassive:hover .sidebar-trigger {
+    color: var(--sidebarHoverColor);
+  }
+}
+
+@media (orientation: portrait), (max-width: var(--mediaQueryWidth)) {
+  .sidebar {
+    width: 0.5rem;
+    cursor: pointer;
+  }
+  .sidebar:not(.portraitActive):hover > .sidebar-trigger {
+    color: var(--sidebarHoverColor);
+  }
+}
+
+@media (hover: none) {
+  .sidebar {
+    /* Prevent blue focus on touch devices when tapping 'sidebar-content': */
+    cursor: auto;
+  }
+}
+
+.sidebar .sidebar-trigger {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    height: 4.1rem;
+    padding: 0.5rem 1rem 0.8rem 1rem;
+    margin: 0;
+    color: var(--sidebarFontColor);
+    background-color: var(--sidebarFillColor);
+    font-size: 2.5rem;
+    
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    border-right: 2px solid var(--sidebarFontColor);
+}
+
+.sidebar .sidebar-trigger:hover {
+  color: var(--sidebarHoverColor);
+}
+@media (hover: none) {
+  /* Prevent color change on touch devices: */
+  .sidebar .sidebar-trigger:hover {
+    color: var(--sidebarFontColor);
+  }
+}
+
+
+@media (orientation: portrait), (max-width: var(--mediaQueryWidth)) {
+  .sidebar .sidebar-background {
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      visibility: hidden;
+      z-index: 5;
+  }
+  .sidebar .sidebar-background.portraitActive {
+    visibility: visible;
+  }
+}
+
+.sidebar .sidebar-content {
+  height: 100vh;
+  width: inherit;
+  z-index: 5;
+  background-color: var(--sidebarFillColor);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  cursor: auto;
+}
+
+@media (orientation: landscape), (min-width: var(--mediaQueryWidth)) {
+  .sidebar .sidebar-content {
+    width: var(--sidebarLandscapeWidth);
+    left: 0;
+    transition: left var(--transitionDuration);
+  }
+  .sidebar .sidebar-content.landscapePassive {
+    left: -90vw;
+  }
+}
+
+@media (orientation: portrait), (max-width: var(--mediaQueryWidth)) {
+  .sidebar .sidebar-content {
+    width: var(--sidebarPortraitWidth);
+    left: -90vw;
+    transition: left var(--transitionDuration);
+  }
+  .sidebar .sidebar-content.portraitActive {
+    left: 0;
+  }
+}
+
+.sidebar .sidebar-content .sidebar-name {
+  height: 2.6rem;
+  padding: 0.8rem 0.5rem 0.7rem 4.5rem;
+  margin: 0;
+  color: var(--sidebarFontColor);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sidebar .sidebar-content .line {
+  padding: 0;
+  margin: 0;
+  border-color: var(--sidebarFontColor);
+  @supports (-moz-appearance: meterbar) {
+    /* Firefox Specific: */
+    border-style: solid;
+  }
+}
+
+.sidebar .sidebar-content .padding {
+  padding: 8rem 1rem 1rem 1rem;
+}
+
+/* Styles of settings subcomponents: */
+.fontColor {
+  color: var(--sidebarFontColor);
+}
