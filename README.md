@@ -1,9 +1,8 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Connect Four with React
+This project is a reimplementation of [connect4_react](https://github.com/davidde/connect4_react), with the goal of isolating the GSAP Tween functions in `src/app/game/checker.js` (using them without that library), for the purpose of understanding them better.
 
 ## Available Scripts
-
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
 In the project directory, you can run:
 
 ### `npm start`

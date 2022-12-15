@@ -1,0 +1,106 @@
+// This will copy all the variables from '_variables.scss' into this file:
+@import "../variables";
+
+.status {
+  grid-area: status;
+  background-color: $statusFillColor;
+  border-bottom: 2px solid $statusBorderColor;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 3.6rem;
+  padding: 0.5rem 1rem 0rem 4.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.status.yellow {
+  background-color: rgb(251, 255, 0);
+}
+
+.status.orange {
+  background-color: rgb(226, 85, 3);
+}
+
+.status.red {
+  background-color: red;
+}
+
+.status.green {
+  background-color: rgb(31, 134, 5);
+}
+
+.status.cyan {
+  background-color: rgb(6, 90, 199);
+}
+
+.status.blue {
+  background-color: blue;
+}
+
+.status.purple {
+  background-color: rgb(155, 3, 226);
+}
+
+.status.draw {
+  color: #faf1d7;
+}
+
+#timerDisplay {
+  display: inline-block;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+#gameOverMessage {
+  // Use the empty #gameOverMessage as filler, to push #timerDisplay
+  // and #statusMessage to the left and right respectively:
+  flex-grow: 5;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#statusMessage {
+  display: inline-block;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+#statusMessage.yellow,
+#timerDisplay.yellow {
+  color: rgb(192, 192, 2);
+}
+
+#statusMessage.orange,
+#timerDisplay.orange {
+  color: rgb(226, 85, 3);
+}
+
+#statusMessage.red,
+#timerDisplay.red {
+  color: red;
+}
+
+#statusMessage.green,
+#timerDisplay.green {
+  color: rgb(31, 134, 5);
+}
+
+#statusMessage.cyan,
+#timerDisplay.cyan {
+  color: rgb(6, 90, 199);
+}
+
+#statusMessage.blue,
+#timerDisplay.blue {
+  color: blue;
+}
+
+#statusMessage.purple,
+#timerDisplay.purple {
+  color: rgb(155, 3, 226);
+}
+
