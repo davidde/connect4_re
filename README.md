@@ -1,5 +1,9 @@
 # Connect Four with React
-This project is a reimplementation of [connect4_react](https://github.com/davidde/connect4_react), with the goal of isolating the GSAP Tween functions in `src/app/game/checker.js` (using them without that library), for the purpose of understanding them better.
+This project is a reimplementation of [connect4_react](https://github.com/davidde/connect4_react), with the following goals:
+1. - Getting rid of the sass dependency of the original.
+   - Updating the project and making it run on Windows (this version is developed on Windows).
+2. Isolating the GSAP Tween functions in `src/app/game/checker.js` (use them without the majority of that library), for the purpose of understanding them better.
+3. Maybe add some of the polish as developed in [gatsby-starter-simpwa](https://github.com/davidde/gatsby-starter-simpwa).
 
 ## Available Scripts
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
