@@ -1,6 +1,7 @@
 import React from 'react';
-import TweenMax from 'gsap/TweenMax';
 import './checker.css';
+
+var GSAP = require('../../GSAP');
 
 
 class Checker extends React.Component {
@@ -20,17 +21,15 @@ class Checker extends React.Component {
 
   componentDidMount() {
     let cy = this.props.rowID * 100;
-    if (this.props.rowID === 0)
-      cy = cy.toString();
-    else
-      cy = (cy + 8).toString();
-    let duration = (this.props.rowID * 0.055 + 0.35).toString();
+    if (this.props.rowID !== 0)
+      cy = cy + 8;
+    let duration = this.props.rowID * 0.055 + 0.35;
     // Use the node ref to create the animation:
-    this.tween = TweenMax.to(this.node,
+    this.tween = GSAP.TweenMax.to(this.node,
                                 duration,
                                 //{x: '0', y: '0'}, // 'from' position
-                                {x: '0', y: cy,    // 'to' position
-                                ease: 'easeOutBounce'});
+                                {x: 0, y: cy,    // 'to' position
+                                ease: 'bounce'});
   }
 
   render() {

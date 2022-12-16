@@ -147,11 +147,6 @@ function Game(props) {
             <rect id='bottom-padding' width={bottomPaddingWidth} height='20' x='54' y={bottomPaddingY} fill='url(#blackBottom)' />
             <rect id='left-pillar' width='60' height={pillarHeight} fill='url(#blackPillars)' x='0' y='100' rx='10' ry='10' />
             <rect id='right-pillar' width='60' height={pillarHeight} fill='url(#blackPillars)' x={rightPillarX} y='100' rx='10' ry='10' />
-            
-            {/* Svg tags for LSD; only visible when '$LSD: true;' in 'src/app/app.scss' */}
-            <text className='svg-tags' filter='url(#redtags)' x='22' y='15' fontSize='0.9rem' fill='white'>#svg-container</text>
-            <text className='svg-tags' filter='url(#redtags)' x='73' y='89' fontSize='0.9rem' fill='white'>#svg-grid</text>
-            <text className='svg-tags' filter='url(#redtags)' x='250' y='50' fontSize='0.9rem' fill='white'>Invisible top row for checkers about to drop</text>
           </g>
         </svg>
       </div>

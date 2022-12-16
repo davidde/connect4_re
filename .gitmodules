@@ -1,0 +1,3 @@
+[submodule "src/GSAP"]
+	path = src/GSAP
+	url = https://github.com/greensock/GSAP.git
