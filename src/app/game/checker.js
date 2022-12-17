@@ -1,7 +1,7 @@
 import React from 'react';
 import './checker.css';
 
-import TweenMax from '../../GSAP';
+import gsap from '../../GSAP';
 
 
 class Checker extends React.Component {
@@ -13,10 +13,8 @@ class Checker extends React.Component {
   //                'loop' the checkers.)
   constructor(props) {
     super(props);
-    // Reference to the DOM node:
-    this.node = null;
-    // Reference to the animation:
-    this.tween = null;
+    this.node = null;  // Reference to the DOM node
+    this.tween = null; // Reference to the animation
   }
 
   componentDidMount() {
@@ -24,12 +22,16 @@ class Checker extends React.Component {
     if (this.props.rowID !== 0)
       cy = cy + 8;
     let duration = this.props.rowID * 0.055 + 0.35;
-    // Use the node ref to create the animation:
-    this.tween = TweenMax.to(this.node,
-                                duration,
-                                //{x: '0', y: '0'}, // 'from' position
-                                {x: 0, y: cy,    // 'to' position
-                                ease: 'bounce'});
+
+    this.tween = gsap.to(
+      this.node, // Use the node ref to create the animation
+      {
+        duration: duration,
+        x: 0,
+        y: cy,
+        ease: 'bounce'
+      }
+    );
   }
 
   render() {
